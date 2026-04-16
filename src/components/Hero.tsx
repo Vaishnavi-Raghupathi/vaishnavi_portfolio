@@ -53,7 +53,7 @@ export default function Hero() {
             className="md:col-span-4 relative aspect-[4/5] md:aspect-square overflow-hidden transition-all duration-700 border border-accent/20 shadow-[20px_20px_60px_-15px_rgba(30,64,175,0.1)]"
           >
             <img 
-              src="/Screenshot 2026-04-16 at 2.37.05 PM.png" 
+              src="/myphoto.jpeg" 
               alt="Vaishnavi R"
               referrerPolicy="no-referrer"
               className="w-full h-full object-cover object-center scale-110 hover:scale-100 transition-transform duration-1000"
