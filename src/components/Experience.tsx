@@ -12,7 +12,7 @@ const experiences = [
     points: [
       "Developed a hybrid physics–ML PMSM Digital Twin combining dq-axis physics, RK4 simulation, PSO calibration, and neural residual correction. Reduced held-out current-prediction RMSE by 86.7%, from 11.61 A to 1.55 A.",
       "Built anomaly-detection, severity-estimation, and temperature-compensated degradation-monitoring pipelines. Achieved 95.1% ITSC detection on measured fault batches and 93.2% detection of permanent-magnet flux-loss cases.",
-      `First author of “${manuscript.title},” submitted to ${manuscript.journal}; co-authored with Dr. Vibhor Pandhare, Assistant Professor, IIT Bombay.`,
+      `First author of “${manuscript.title},” submitted to ${manuscript.journal}.`,
     ],
   },
   {
