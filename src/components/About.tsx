@@ -61,6 +61,12 @@ export function Education() {
       school: "Christ University, Bangalore",
       degree: "B.Sc. (Hons.) in Mathematics and Physics",
       period: "Expected 2027"
+    },
+    {
+      school: "Sophia High School",
+      degree: "Physics, Chemistry, Mathematics, Computer Science",
+      period: "Completed",
+      grade: "10th Grade: 9.5 CGPA | 12th Grade: 8.5 CGPA"
     }
   ];
 
@@ -81,6 +87,7 @@ export function Education() {
               <span className="label-micro text-accent shrink-0">{edu.period}</span>
             </div>
             <p className="text-sm serif-italic text-muted-foreground">{edu.degree}</p>
+            {edu.grade && <p className="font-mono text-xs text-muted-foreground">{edu.grade}</p>}
           </div>
         ))}
       </div>
