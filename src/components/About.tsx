@@ -3,20 +3,20 @@ import { motion } from "motion/react";
 export function TechSkills() {
   const skillCategories = [
     {
-      title: "Mathematics & Numerical Methods",
-      items: ["Fast Multipole Methods", "PINNs", "ODE/PDE Solvers", "Numerical Linear Algebra", "Differential Geometry"]
+      title: "Methods",
+      items: ["SINDy", "System Identification", "Physics-Informed ML", "Scientific ML", "Time-Series Modeling", "Model Evaluation"]
     },
     {
       title: "Machine Learning",
-      items: ["PyTorch", "Neural ODEs", "Scientific ML", "FAISS", "Sentence Transformers", "scikit-learn"]
+      items: ["PyTorch", "scikit-learn", "Deep Learning", "Residual Learning", "Anomaly Detection"]
     },
     {
-      title: "Programming",
-      items: ["Python (Advanced)", "JavaScript/TypeScript", "SQL", "R", "C/C++ (Basic)", "Java"]
+      title: "Languages & Tools",
+      items: ["Python", "SQL", "Java", "Git", "GitHub", "Streamlit"]
     },
     {
-      title: "Tools & Infra",
-      items: ["NumPy", "SciPy", "Pandas", "Git", "Linux", "Docker", "Streamlit", "Flask"]
+      title: "Scientific Computing",
+      items: ["NumPy", "SciPy", "Pandas", "Numerical ODE Solvers", "Mathematical Modeling"]
     }
   ];
 
@@ -53,22 +53,14 @@ export function TechSkills() {
 export function Education() {
   const education = [
     {
-      school: "Indian Institute of Technology, Madras",
-      degree: "B.S. Data Science and Applications",
-      period: "Expected 2028",
-      grade: "CGPA: 8.0/10"
+      school: "Indian Institute of Technology Madras (Online)",
+      degree: "B.S. in Data Science and Applications",
+      period: "Expected 2027"
     },
     {
       school: "Christ University, Bangalore",
-      degree: "B.Sc. Mathematics and Physics (Honors)",
-      period: "Expected 2027",
-      grade: "CGPA: 8.1/10"
-    },
-    {
-      school: "Sophia High School",
-      degree: "Physics, Chemistry, Mathematics, Computer Science",
-      period: "Completed",
-      grade: "10th Grade: 9.5 CGPA | 12th Grade: 8.5 CGPA"
+      degree: "B.Sc. (Hons.) in Mathematics and Physics",
+      period: "Expected 2027"
     }
   ];
 
@@ -84,12 +76,11 @@ export function Education() {
       <div className="space-y-10">
         {education.map((edu) => (
           <div key={edu.school} className="flex flex-col gap-2">
-            <div className="flex justify-between items-start">
+            <div className="flex flex-col sm:flex-row justify-between items-start gap-2 sm:gap-6">
               <h4 className="text-lg font-bold text-foreground">{edu.school}</h4>
-              <span className="label-micro text-accent">{edu.period}</span>
+              <span className="label-micro text-accent shrink-0">{edu.period}</span>
             </div>
             <p className="text-sm serif-italic text-muted-foreground">{edu.degree}</p>
-            <p className="font-mono text-[10px] opacity-50">{edu.grade}</p>
           </div>
         ))}
       </div>

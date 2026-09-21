@@ -1,64 +1,60 @@
 import { motion } from "motion/react";
-
 import { Github } from "lucide-react";
+import { manuscript } from "../data/portfolio";
+
+const experiences = [
+  {
+    company: "Indian Institute of Technology Bombay",
+    role: "ML Research Intern",
+    period: "May 2026 – July 2026",
+    location: "IIT Bombay",
+    link: undefined,
+    points: [
+      "Developed a hybrid physics–ML PMSM Digital Twin combining dq-axis physics, RK4 simulation, PSO calibration, and neural residual correction. Reduced held-out current-prediction RMSE by 86.7%, from 11.61 A to 1.55 A.",
+      "Built anomaly-detection, severity-estimation, and temperature-compensated degradation-monitoring pipelines. Achieved 95.1% ITSC detection on measured fault batches and 93.2% detection of permanent-magnet flux-loss cases.",
+      `First author of “${manuscript.title},” submitted to ${manuscript.journal}; co-authored with Dr. Vibhor Pandhare, Assistant Professor, IIT Bombay.`,
+    ],
+  },
+  {
+    company: "Computational Mathematics Project",
+    role: "Research Intern",
+    period: "Aug 2025 – Dec 2025",
+    location: "Mentored by PhD Scholar, IIT Madras",
+    link: "https://github.com/Vaishnavi-Raghupathi/bbFMM1D-Python",
+    points: [
+      "Studied the mathematical foundations of the Black-Box Fast Multipole Method for accelerating large-scale kernel computations.",
+      "Implemented a one-dimensional BBFMM solver in Python and benchmarked its scaling against direct dense kernel evaluation.",
+    ],
+  },
+];
 
 export default function Experience() {
-  const experiences = [
-    {
-      company: "Research Experience",
-      role: "Undergraduate Researcher",
-      period: "Aug 2025 – Present",
-      location: "Supervised by PhD Scholar, IIT Madras",
-      link: "https://github.com/Vaishnavi-Raghupathi/bbFMM1D-Python",
-      points: [
-        "Developed a Python implementation of the Black-Box Fast Multipole Method (BBFMM), reducing complexity from O(N²) to near-linear scaling",
-        "Designed modular framework with kernel generalization and interpolation-based compression; performed error vs. efficiency analysis",
-        "Investigating integration of BBFMM into Physics-Informed Neural Networks (PINNs) for computational acceleration",
-        "Benchmarking classical vs. learning-augmented solvers across varying scales and noise regimes"
-      ]
-    }
-  ];
-
   return (
-    <motion.section
-      id="experience"
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      className="section-card border-accent/20"
-    >
+    <motion.section id="experience" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="section-card border-accent/20">
       <h3 className="label-micro mb-8 text-accent">Experience</h3>
       <div className="space-y-12">
-        {experiences.map((exp, idx) => (
-          <a 
-            key={idx} 
-            href={exp.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex flex-col gap-6 p-6 -m-6 rounded-xl hover:bg-muted/50 transition-all group"
-          >
-            <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-              <div className="space-y-1">
-                <h4 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors">{exp.company}</h4>
+        {experiences.map((exp) => (
+          <article key={exp.company} className="space-y-6">
+            <div className="flex flex-col md:flex-row md:items-start justify-between gap-4">
+              <div className="space-y-2">
+                <h4 className="text-xl font-bold text-foreground">{exp.company}</h4>
                 <p className="text-sm font-medium serif-italic text-muted-foreground">{exp.role}</p>
               </div>
-              <div className="text-left md:text-right flex flex-col md:items-end gap-2">
-                <div className="flex items-center gap-3">
-                  <p className="label-micro text-accent">{exp.period}</p>
-                  <Github className="w-4 h-4 text-muted-foreground group-hover:text-accent transition-colors" />
-                </div>
-                <p className="font-mono text-[10px] opacity-50">{exp.location}</p>
+              <div className="md:text-right space-y-2 md:max-w-56 shrink-0">
+                <p className="label-micro text-accent">{exp.period}</p>
+                <p className="font-mono text-[10px] text-muted-foreground">{exp.location}</p>
               </div>
             </div>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-              {exp.points.map((point, pIdx) => (
-                <li key={pIdx} className="text-xs text-muted-foreground leading-relaxed flex gap-3">
-                  <span className="text-accent font-bold">/</span>
+            <ul className="space-y-4">
+              {exp.points.map((point) => (
+                <li key={point} className="text-sm text-muted-foreground leading-relaxed flex gap-3">
+                  <span aria-hidden="true" className="text-accent font-bold">/</span>
                   <span>{point}</span>
                 </li>
               ))}
             </ul>
-          </a>
+            {exp.link && <a href={exp.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-sm font-medium text-accent hover:underline"><Github className="w-4 h-4" /> View BBFMM code</a>}
+          </article>
         ))}
       </div>
     </motion.section>
