@@ -1,6 +1,5 @@
 import { motion } from "motion/react";
-import { ArrowRight, Download } from "lucide-react";
-import { profile } from "../data/portfolio";
+import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -40,9 +39,6 @@ export default function Hero() {
                 <a href="#projects" className="group flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-accent transition-colors">
                   Explore Work
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a href={profile.resume} download className="flex items-center gap-2 text-sm font-bold uppercase tracking-widest hover:text-accent transition-colors">
-                  Resume <Download className="w-4 h-4" />
                 </a>
               </div>
             </motion.div>

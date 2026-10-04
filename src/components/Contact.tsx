@@ -27,7 +27,6 @@ export default function Contact() {
           <a href={profile.github} target="_blank" rel="noopener noreferrer" className="label-micro hover:text-accent transition-colors">GitHub</a>
           <a href={profile.instagram} target="_blank" rel="noopener noreferrer" className="label-micro hover:text-accent transition-colors">Instagram</a>
         </div>
-        <a href={profile.resume} download className="label-micro hover:text-accent transition-colors">Download resume</a>
       </div>
     </motion.section>
   );

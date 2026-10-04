@@ -5,7 +5,6 @@ export const profile = {
   github: "https://github.com/Vaishnavi-Raghupathi",
   linkedin: "https://linkedin.com/in/vaishnavi-r-8a97672a6",
   instagram: "https://www.instagram.com/workiniterations/",
-  resume: `${import.meta.env.BASE_URL}Vaishnavi_R_ML_Research_Resume.pdf`,
 };
 
 export const manuscript = {
