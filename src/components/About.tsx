@@ -55,12 +55,12 @@ export function Education() {
     {
       school: "Indian Institute of Technology Madras (Online)",
       degree: "B.S. in Data Science and Applications",
-      period: "Expected 2027"
+      period: "Expected 2028"
     },
     {
       school: "Christ University, Bangalore",
       degree: "B.Sc. (Hons.) in Mathematics and Physics",
-      period: "Expected 2027"
+      period: "Expected 2028"
     },
     {
       school: "Sophia High School",
